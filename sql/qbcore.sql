@@ -291,7 +291,7 @@ CREATE TABLE IF NOT EXISTS `mdt_profiles_identifiers` (
 
 CREATE TABLE IF NOT EXISTS `mdt_profiles_tags` (
   `profileId` int(10) unsigned NOT NULL,
-  `tag` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tag` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   UNIQUE KEY `unique_profile_tag` (`profileId`, `tag`),
   KEY `FK_mdt_profiles_tags_mdt_profiles` (`profileId`),
   CONSTRAINT `FK_mdt_profiles_tags_mdt_profiles` FOREIGN KEY (`profileId`) REFERENCES `mdt_profiles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
